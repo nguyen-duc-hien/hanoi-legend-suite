@@ -457,6 +457,7 @@ select {
   box-shadow: 0px 4px 20px 0px rgba(161, 161, 161, 0.15);
 }
 .input-label {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -480,6 +481,23 @@ select {
       color: red;
     }
   }
+  .title-booking {
+    @extend .text-body-xs-semibold;
+    color: var(--text-color);
+    padding: 8px 16px;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    .required {
+      color: #af1f27;
+    }
+  }
+  &.active {
+    .title-booking {
+      display: none;
+    }
+  }
+
   .input-field {
     @extend .text-body-xs-medium;
     display: flex;
@@ -494,6 +512,12 @@ select {
     &::placeholder {
       text-transform: uppercase;
       color: var(--text-color);
+    }
+    &.lower {
+      &::placeholder {
+        text-transform: lowercase;
+        color: var(--text-color);
+      }
     }
     &.transparent {
       padding: 0 12px;
@@ -1298,6 +1322,85 @@ hr {
     right: unset;
     bottom: unset;
     margin: 0;
+  }
+}
+
+.details {
+  .swiper-slide {
+    figure {
+      img {
+        min-width: 100%;
+        max-width: 386px;
+        max-height: 673px;
+        aspect-ratio: 386/673;
+      }
+    }
+
+    &-active {
+      figure {
+        img {
+          min-width: 100%;
+          height: 527px;
+          aspect-ratio: 792/527;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .swiper-slide {
+      figure {
+        img {
+          max-height: 508px;
+        }
+      }
+
+      &-active {
+        figure {
+          img {
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .swiper-slide {
+      figure {
+        img {
+          max-height: 400px;
+        }
+      }
+
+      &-active {
+        figure {
+          img {
+            height: auto;
+            max-height: 400px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .swiper-slide {
+      figure {
+        img {
+          max-height: 250px;
+        }
+      }
+
+      &-active {
+        figure {
+          img {
+            height: auto;
+            max-height: 250px;
+          }
+        }
+      }
+    }
   }
 }
 
