@@ -1898,7 +1898,8 @@ hr.footer-divider {
 .footer .info-item:hover a {
   color: var(--secondary);
 }
-.footer .social-list {
+
+.social-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1907,7 +1908,7 @@ hr.footer-divider {
           align-items: center;
   gap: 12px;
 }
-.footer .social-icon {
+.social-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1921,7 +1922,7 @@ hr.footer-divider {
           align-items: center;
   border-radius: 50px;
 }
-.footer .social-icon:hover svg path {
+.social-icon:hover svg path {
   fill: var(--secondary);
 }
 
